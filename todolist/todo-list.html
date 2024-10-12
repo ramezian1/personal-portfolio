@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="todolist-styles.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+    </header>
+    <main>
+      <div class="todo-container">
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <input type="date" id="dueDateInput" placeholder="Due date">
+        <button id="addTaskButton">Add Task</button>
+    </div>
+    <div id="sampleTasksContainer"></div>
+    <ul id="taskList">
+      <div class="sample-tasks">
+          <h3>Sample Tasks</h3>
+          <button class="sample-task-button">Buy groceries</button>
+          <button class="sample-task-button">Complete JavaScript project</button>
+          <button class="sample-task-button">Read a book</button>
+          <button class="sample-task-button">Exercise for 30 minutes</button>
+          <button class="sample-task-button">Watch a movie</button>
+          <button class="sample-task-button">Call a friend</button>
+      </div>
+      <ul id="taskList">
+        <!-- List of tasks will be dynamically added here -->
+    </ul>
+  </main>
+    <footer>
+        <p>&copy; 2024 Robert Mezian</p>
+    </footer>
+
+    <!-- Link to your JS file -->
+    <script src="todo-list.js"></script> 
+</body>
+</html>

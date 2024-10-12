@@ -1,0 +1,236 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 80px; /* Space for the fixed navbar */
+}
+
+/* Navigation Bar */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header nav ul li a:hover {
+  color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Main Heading */
+h1 {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #617d98;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-text p span {
+  font-weight: bold;
+  font-style: italic;
+  color: #f0b429; /* Yellow accent for JavaScript text */
+}
+
+/* Yellow Button Styling */
+.yellow-btn {
+    display: inline-block;
+    background-color: #f0b429;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite; /* Applying the bounce animation */
+  }
+
+.yellow-btn:hover {
+  background-color: #e3a617;
+}
+/* Bounce Animation Keyframes */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* No movement */
+  }
+  40% {
+    transform: translateY(-20px); /* Moves up by 20px */
+  }
+  60% {
+    transform: translateY(-10px); /* Moves up slightly by 10px */
+  }
+}
+/* Hero Image Styling */
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+/* Projects Section */
+.projects-section {
+  padding: 2rem 1rem; /* Reduced padding for the section */
+  background-color: #fff;
+  text-align: center;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four items per row */
+  gap: 1rem; /* Reduced gap */
+  justify-items: center;
+  padding: 0 2rem;
+}
+
+/* Project Card Styling */
+.project-card {
+  max-width: 300px; /* Adjusted width for better fit */
+  width: 100%;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 0; /* Removed margin at the bottom to ensure cards stay close */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-info h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  color: #555;
+  font-size: 1rem;
+}
+
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Full width on small screens */
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+}

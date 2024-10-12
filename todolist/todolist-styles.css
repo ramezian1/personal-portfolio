@@ -1,0 +1,185 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f5f8; /* Light grayish background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full height for centering */
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #102a42; /* Dark blue for headings */
+    margin-bottom: 2rem; /* Space below the title */
+    font-size: 2.5rem; /* Increased font size for the title */
+}
+
+/* Input Styles */
+input[type="text"] {
+    width: 80%;
+    padding: 1rem; /* Increased padding for a better touch area */
+    margin: 1rem 0; /* Margin around input for spacing */
+    border: 2px solid #102a42;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Larger font size for input */
+}
+
+/* Button Styles */
+button {
+    background-color: transparent;
+    color: #102a42;
+    border: 2px solid #102a42;
+    padding: 1rem 2rem; /* Increased padding for better button appearance */
+    cursor: pointer;
+    margin: 1rem 0; /* Space around button */
+    font-size: 1.2rem; /* Larger font size for button */
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #102a42;
+    color: white; /* Change text color on hover */
+}
+
+/* Task List Styles */
+ul {
+    list-style-type: none;
+    max-width: 600px; /* Limit the width of the task list */
+    margin: 1rem auto; /* Center the task list */
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; /* Spacing between tasks */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1rem; /* Increased font size for task items */
+}
+
+li:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
+.sample-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.sample-task-button {
+    background-color: #e59819; /* Yellow */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sample-task-button:hover {
+    background-color: #1938e5; /* Match Add Task */
+    transform: scale(1.05);
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    width: 100%; /* Allow the container to stretch full width */
+    max-width: 600px; /* Optional: Set a max width */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.task-item {
+    display: flex; /* Use flexbox for tasks */
+    justify-content: space-between; /* Space between text and due date */
+    background: #fff; /* Background color for tasks */
+    padding: 10px; /* Padding around each task */
+    margin: 5px 0; /* Space between tasks */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+}
+
+.task-text {
+    flex: 1; /* Allow task text to take available space */
+    margin-right: 10px; /* Space between text and due date */
+}
+
+.due-date {
+    color: #888; /* Optional color for due date */
+    font-style: italic; /* Optional styling for differentiation */
+}
+
+#taskInput, #dueDateInput, #addTaskButton {
+    width: 100%; /* Make inputs full width */
+    padding: 10px; /* Add padding */
+    margin: 5px 0; /* Space between elements */
+}
+
+#addTaskButton {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Make task list full width */
+}
+
+#taskList li {
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+/* Add Task Button Styling */
+#addTaskButton {
+    background-color: #1938e5; /* Default background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    transition: transform 0.3s ease-in-out, background-color 0.45s ease-in-out;
+}
+
+/* Change background color on hover */
+#addTaskButton:hover {
+    background-color: #e59819; /* Darker shade for hover effect */
+    transform: scale(1.4); /* Increases size by 10% on hover */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    40% {
+        transform: translateY(-10px); /* Move up */
+    }
+    60% {
+        transform: translateY(-5px); /* Move down a bit */
+    }
+}

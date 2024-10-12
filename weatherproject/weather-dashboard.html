@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="weather-styles.css">
+  <title>Weather Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1>Weather Dashboard</h1>
+    <div class="input-container">
+      <label for="cityInput">Enter city or zip code:</label>
+      <input type="text" id="cityInput" placeholder="Enter City or Zip Code">
+      <button id="getWeatherButton">Get Weather</button>
+      <div id="loading" class="spinner" style="display: none;"></div>
+      <p id="errorMessage" style="color: red;"></p> <!-- Error message area -->
+    </div>
+  </header>
+
+  <main>
+    <section class="current-weather">
+      <h2 id="location" aria-live="polite">Location: </h2>
+      <p id="temperature">Temperature: </p>
+      <p id="conditions">Conditions: </p>
+      <p id="humidity">Humidity: </p>
+      <p id="windSpeed">Wind Speed: </p>
+      <img id="weatherIcon" src="" alt="Weather Icon" class="weather-icon">
+    </section>
+
+    <section class="eight-day-forecast">
+      <h3>8-Day Forecast</h3>
+      <ul id="eightDayForecastList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Weather Dashboard by Robert Mezian</p>
+  </footer>
+
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyWcCd4OtZg1qC_sxRG5WpWzjJ17aJ6E&libraries=places&callback=initMap"></script>
+
+  <script src="weather-script.js"></script>
+</body>
+</html>
