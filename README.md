@@ -38,6 +38,7 @@ If you'd like to get in touch, you can reach me through the **Contact** page. Fi
 7. **Expense Tracker** – Track daily expenses and view them in a monthly summary. [Live Demo](#) | [Source Code](#) **BETA**
 8. **Fitness Tracker** – Log workouts and view progress over time. [Live Demo](#) | [Source Code](#) **BETA**
    
+   Note: hyperlinks under projects are currently not working as expected. Until I resolve the issue, please use the navigation link from the project structure folder on top, the folders names correspond to the projects mentioned above. I will get the links sorted as soon as possible!
 
 ## 🛠️ Technologies Used
 This portfolio was built using:
