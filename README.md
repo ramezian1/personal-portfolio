@@ -9,7 +9,10 @@ You can view the live version of my portfolio here: [View My Portfolio](https://
 
 **Please use **_index.html_** as the homepage to navigate throughout all my projects and main landing page.**
 
+### **Instructions**
 Please feel free to click on each of the folder projects to view the source code I created for each of these projects. The main reason of this portfolio is to showcase my skills and experience in Javascript, HTML, and CSS as well as software development in hopes of continuing to pursue my career. I have coded, designed, and implemented over 10 websites for various companies and individuals, as well as implemented API Keys and domain purchases and website maintenance. You will find the most up to date link to my resume on my homepage of this repository (index.html). As of 10/2024, I have not purchased a domain or published this website online, so you may need pre requisites such as a code editing software such as Visual Studio Code. A link to download can be found [HERE](https://code.visualstudio.com/).
+
+Note: Right now, the only way to view my projects as a live demo is with having a editor such as VS Code mentioned above (with download link) installed on your device, or just viewing the source code.
 
 ## 🖥️ Website Structure
 
@@ -29,16 +32,23 @@ On the **About** page, you can learn more about me, my career and journey into t
 If you'd like to get in touch, you can reach me through the **Contact** page. Fill out the form, and your message will be sent to me directly.
 
 ## 🛠️ **Projects**
-1. **Menu Projects** – Dynamic restaurant menu builder. [Live Demo](#) | [Source Code](#)
-2. **Recipe Finder** – Search for recipes and view ingredients. [Live Demo](#) | [Source Code](#)
-3. **To-Do List** – A simple and efficient task management app. [Live Demo](#) | [Source Code](#)
-4. **Weather Dashboard** – A dashboard that shows real-time weather updates. [Live Demo](#) | [Source Code](#)
-5. **Paragraph Generator** – Generate random paragraphs for testing and UI purposes. [Live Demo](#) | [Source Code](#)
-6. **Ecommerce Store** – A fully functional store with product listings and a shopping cart. [Live Demo](#) | [Source Code](#) **BETA**
-7. **Expense Tracker** – Track daily expenses and view them in a monthly summary. [Live Demo](#) | [Source Code](#) **BETA**
-8. **Fitness Tracker** – Log workouts and view progress over time. [Live Demo](#) | [Source Code](#) **BETA**
+1. **Menu Projects** – Dynamic restaurant menu builder. [Live Demo](#)(#) | [Source Code](https://github.com/ramezian1/personal-portfolio/blob/main/menu-projects/app.js)
+2. **Recipe Finder** – Search for recipes and view ingredients. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/recipe)
+3. **To-Do List** – A simple and efficient task management app. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/todolist)
+4. **Weather Dashboard** – A dashboard that shows real-time weather updates. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/weatherproject)
+5. **Paragraph Generator** – Generate random paragraphs for testing and UI purposes. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/paragraph-gen)
+6. **Ecommerce Store** – A fully functional store with product listings and a shopping cart. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/commerce) **BETA**
+7. **Expense Tracker** – Track daily expenses and view them in a monthly summary. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/expenses) **BETA**
+8. **Fitness Tracker** – Log workouts and view progress over time. [Live Demo](#) | [Source Code](https://github.com/ramezian1/personal-portfolio/tree/main/fitnesstracker) **BETA**
    
-   Note: hyperlinks under projects are currently not working as expected. Until I resolve the issue, please use the navigation link from the project structure folder on top, the folders names correspond to the projects mentioned above. I will get the links sorted as soon as possible!
+ #### **Known Issues** 
+Hyperlinks under **Live Demo** are currently not working as expected. Until I resolve the issue, please use the navigation link from the project structure folder on top, the folders names correspond to the projects mentioned above. Or please use the source code hyperlink to view the original source code of the corresponding projects. Each project has the following:
+   1. project-name.html
+   2. project-styles.css
+   3. project-name.js
+
+Projects 6-8 are also not yet complete, they still require a lot of testing and design/restructuring before implementation. As well as purchasing/acquiring API Keys to use in my projects for my portfolio. Thank you for your patience and I will keep this repository updated as much as I can.
+ I will get the links sorted as soon as possible!
 
 ## 🛠️ Technologies Used
 This portfolio was built using:
