@@ -5,7 +5,11 @@ Welcome to my developer portfolio! This website showcases 8 projects I've built 
 **NOTE:** This portfolio is currently in** beta and still a work in progress**. Any updates or improvements will be posted shortly.
 
 ## 🚀 Live Demo
-You can view the live version of my portfolio here: [View My Portfolio](https://github.com/ramezian1/personal-portfolio). As of right now, 
+You can view the live version of my portfolio here: [View My Portfolio](https://github.com/ramezian1/personal-portfolio). As of right now, 4/8 projects are currently in testing beta phase. I expect to finish and push out final release by the end of the year!
+
+**Please use **_index.html_** as the homepage to navigate throughout all my projects and main landing page.**
+
+Please feel free to click on each of the folder projects to view the source code I created for each of these projects. The main reason of this portfolio is to showcase my skills and experience in Javascript, HTML, and CSS as well as software development in hopes of continuing to pursue my career. I have coded, designed, and implemented over 10 websites for various companies and individuals, as well as implemented API Keys and domain purchases and website maintenance. You will find the most up to date link to my resume on my homepage of this repository (index.html). As of 10/2024, I have not purchased a domain or published this website online, so you may need pre requisites such as a code editing software such as Visual Studio Code. A link to download can be found [HERE](https://code.visualstudio.com/).
 
 ## 🖥️ Website Structure
 
