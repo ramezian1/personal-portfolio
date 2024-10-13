@@ -5,7 +5,7 @@ Welcome to my developer portfolio! This website showcases 8 projects I've built 
 **NOTE:** This portfolio is currently in** beta and still a work in progress**. Any updates or improvements will be posted shortly.
 
 ## 🚀 Live Demo
-You can view the live version of my portfolio here: [View My Portfolio](https://github.com/ramezian1/personal-portfolio). As of right now, 4/8 projects are currently in testing beta phase. I expect to finish and push out final release by the end of the year!
+You can view the live version of my portfolio here: [View My Portfolio](#). As of right now, 4/8 projects are currently in testing beta phase. I expect to finish and push out final release by the end of the year!
 
 **Please use **_index.html_** as the homepage to navigate throughout all my projects and main landing page.**
 
