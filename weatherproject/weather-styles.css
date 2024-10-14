@@ -54,6 +54,23 @@ header {
     text-align: center; /* Adjust text to fit center or left */
     margin-top: 50px;
 }
+
+#eightDayForecastList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#eightDayForecastList li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
   
 .weather-dashboard {
     display: flex;
@@ -69,12 +86,6 @@ header {
   
 .location-info {
     margin-bottom: 20px;
-}
-  
-.weather-icon {
-    width: 60px;
-    height: 60px;
-    margin-top: 50px;
 }
 
 /* Input and Button Styles */

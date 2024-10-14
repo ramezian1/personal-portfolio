@@ -1,78 +1,58 @@
-document.getElementById('weather-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission from refreshing the page
+document.getElementById('getWeatherButton').addEventListener('click', function() {
+    const cityName = document.getElementById('cityInput').value;
+    const apiKey = '47ef0e1f06b0010b4e3e855d5fb8a1cd'; // Your API key
 
-    const cityName = document.getElementById('cityInput').value; // Ensure the ID matches your HTML
-    const apiKey = '47ef0e1f06b0010b4e3e855d5fb8a1cd'; // Replace with your actual API key
+    if (cityName === '') {
+        document.getElementById('errorMessage').textContent = 'Please enter a city or zip code!';
+        return; // Exit the function if no city is entered
+    }
 
-    // Get the city coordinates
-    const cityUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+    // Clear any previous error message
+    document.getElementById('errorMessage').textContent = '';
     
-    fetch(cityUrl)
+    // Show the loading spinner
+    document.getElementById('loading').style.display = 'block';
+
+    // Fetch the current weather
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
+
+    // Fetch current weather
+    fetch(weatherUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error('City not found'); // Handle errors (e.g., city not found)
+                throw new Error('City not found');
             }
             return response.json();
         })
-        .then(cityData => {
-            // Fetch the 3-hour forecast
-            const hourlyUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
-            return fetch(hourlyUrl);
-        })
-        .then(response => {
-            return response.json();
-        })
-        .then(hourlyData => {
-            // Extract and display the 3-hourly forecast for the next 5 days
-            const hourlyResults = hourlyData.list.map(forecast => `
-                <p>${new Date(forecast.dt * 1000).toLocaleString()}: ${forecast.main.temp}°C, ${forecast.weather[0].description}</p>
-            `).join('');
-            document.getElementById('hourly-result').innerHTML = `
-                <h2>3-Hourly Forecast for ${hourlyData.city.name}</h2>
-                ${hourlyResults}
-            `;
-            
-            // Fetch the 8-day forecast using the coordinates from the initial city request
-            const lat = hourlyData.city.coord.lat; // Use the coordinates from the hourly data
-            const lon = hourlyData.city.coord.lon;
-            const dailyUrl = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&exclude=hourly,minutely`;
+        .then(currentWeather => {
+            // Display current weather
+            document.getElementById('location').textContent = `Location: ${currentWeather.name}`;
+            document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp}°C`;
+            document.getElementById('conditions').textContent = `Conditions: ${currentWeather.weather[0].description}`;
+            document.getElementById('humidity').textContent = `Humidity: ${currentWeather.main.humidity}%`;
+            document.getElementById('windSpeed').textContent = `Wind Speed: ${currentWeather.wind.speed} m/s`;
+            document.getElementById('weatherIcon').src = `http://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png`;
 
-            return fetch(dailyUrl);
+            // Fetch the 5-day / 3-hour forecast
+            return fetch(forecastUrl);
         })
-        .then(response => {
-            return response.json();
-        })
-        .then(dailyData => {
-            // Extract and display the 8-day forecast
-            const dailyResults = dailyData.daily.map(forecast => `
-                <p>${new Date(forecast.dt * 1000).toLocaleDateString()}: ${forecast.temp.day}°C, ${forecast.weather[0].description}</p>
+        .then(response => response.json())
+        .then(forecastData => {
+            // Extract and display the 3-hourly forecast
+            const forecastResults = forecastData.list.map(forecast => `
+                <li>
+                    ${new Date(forecast.dt * 1000).toLocaleString()}: ${forecast.main.temp}°C, ${forecast.weather[0].description}
+                </li>
             `).join('');
-            document.getElementById('daily-result').innerHTML = `
-                <h2>8-Day Forecast</h2>
-                ${dailyResults}
-            `;
+            document.getElementById('eightDayForecastList').innerHTML = forecastResults;
         })
         .catch(error => {
-            document.getElementById('hourly-result').innerHTML = `<p>Error: ${error.message}</p>`;
-            document.getElementById('daily-result').innerHTML = ''; // Clear daily results if there's an error
+            // Display the error message if something goes wrong
+            document.getElementById('errorMessage').textContent = `Error: ${error.message}`;
+        })
+        .finally(() => {
+            // Hide the loading spinner once everything is done
+            document.getElementById('loading').style.display = 'none';
         });
 });
-
-// Initialize Google Places Autocomplete
-function initMap() {
-    const input = document.getElementById('cityInput'); // Ensure this matches the input field ID
-    const autocomplete = new google.maps.places.Autocomplete(input);
-  
-    // Listener for when a place is selected
-    autocomplete.addListener('place_changed', function () {
-        const place = autocomplete.getPlace();
-        if (place && place.geometry) {
-            // Handle selected place (e.g., fetch weather data)
-            console.log('Selected place:', place);
-            const cityName = place.name; // Get the city name
-            getWeatherData(cityName); // Call your function to get weather data
-        }
-    });
-}
-
-// Function to fetch weather data (not needed as a separate function, 
