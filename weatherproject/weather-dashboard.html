@@ -12,7 +12,7 @@
     <h1>Weather Dashboard</h1>
     <div class="input-container">
       <label for="cityInput">Enter city or zip code:</label>
-      <input type="text" id="cityInput" placeholder="Enter City or Zip Code">
+      <input type="text" id="cityInput" placeholder="Enter City or Zip Code" autocomplete="off"> <!-- Added autocomplete off -->
       <button id="getWeatherButton">Get Weather</button>
       <div id="loading" class="spinner" style="display: none;"></div>
       <p id="errorMessage" style="color: red;"></p> <!-- Error message area -->
@@ -30,6 +30,10 @@
     </section>
 
     <section class="eight-day-forecast">
+      <div class="forecast-sections">
+        <h2 class="eight-day-forecast">8-Day Forecast</h2>
+        <div id="eightDayForecastList" class="forecast-container"></div> <!-- Change to a div -->
+    </div>
       <h3>8-Day Forecast</h3>
       <ul id="eightDayForecastList"></ul>
     </section>
@@ -39,8 +43,7 @@
     <p>© 2024 Weather Dashboard by Robert Mezian</p>
   </footer>
 
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyWcCd4OtZg1qC_sxRG5WpWzjJ17aJ6E&libraries=places&callback=initMap"></script>
-
-  <script src="weather-script.js"></script>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSyWcCd4OtZg1qC_sxRG5WpWzjJ17aJ6E&libraries=places&callback=initializeAutocomplete"></script>
+ <script src="weather-script.js"></script>
 </body>
 </html>
