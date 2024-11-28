@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 document.getElementById('getWeatherButton').addEventListener('click', function() {
     const cityName = document.getElementById('cityInput').value;
     const apiKey = '47ef0e1f06b0010b4e3e855d5fb8a1cd'; // Your API key
@@ -7,6 +8,8 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
         document.getElementById('errorMessage').textContent = 'Please enter a city or zip code!';
         return; // Exit the function if no city is entered
 =======
+=======
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
 function initializeAutocomplete() {
     const input = document.getElementById('cityInput');
     const autocomplete = new google.maps.places.Autocomplete(input, {
@@ -28,7 +31,10 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
     if (cityNameOrZip === '') {
         document.getElementById('errorMessage').textContent = 'Please enter a city or zip code!';
         return; // Exit the function if no input is entered
+<<<<<<< HEAD
 >>>>>>> e413bfc490e85e95caea74200e167dc1f7014d49
+=======
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
     }
 
     // Clear any previous error message
@@ -38,10 +44,13 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
     document.getElementById('loading').style.display = 'block';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Fetch the current weather
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=metric`;
 =======
+=======
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
     // Determine if input is numeric (zip code) or alphabetic (city name)
     const isZipCode = /^\d+$/.test(cityNameOrZip);
 
@@ -53,17 +62,24 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
     const forecastUrl = isZipCode
     ? `https://api.openweathermap.org/data/2.5/forecast?zip=${cityNameOrZip},us&appid=${apiKey}&units=imperial`
     : `https://api.openweathermap.org/data/2.5/forecast?q=${cityNameOrZip}&appid=${apiKey}&units=imperial`;
+<<<<<<< HEAD
 >>>>>>> e413bfc490e85e95caea74200e167dc1f7014d49
+=======
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
 
     // Fetch current weather
     fetch(weatherUrl)
         .then(response => {
             if (!response.ok) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 throw new Error('City not found');
 =======
                 throw new Error('Location not found');
 >>>>>>> e413bfc490e85e95caea74200e167dc1f7014d49
+=======
+                throw new Error('Location not found');
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
             }
             return response.json();
         })
@@ -71,10 +87,14 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
             // Display current weather
             document.getElementById('location').textContent = `Location: ${currentWeather.name}`;
 <<<<<<< HEAD
+<<<<<<< HEAD
             document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp}°C`;
 =======
             document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp}°F`;
 >>>>>>> e413bfc490e85e95caea74200e167dc1f7014d49
+=======
+            document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp}°F`;
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
             document.getElementById('conditions').textContent = `Conditions: ${currentWeather.weather[0].description}`;
             document.getElementById('humidity').textContent = `Humidity: ${currentWeather.main.humidity}%`;
             document.getElementById('windSpeed').textContent = `Wind Speed: ${currentWeather.wind.speed} m/s`;
@@ -82,6 +102,7 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
 
             // Fetch the 5-day / 3-hour forecast
             return fetch(forecastUrl);
+<<<<<<< HEAD
 <<<<<<< HEAD
         })
         .then(response => response.json())
@@ -104,6 +125,8 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
         });
 });
 =======
+=======
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
             })
             .then(response => response.json())
             .then(forecastData => {
@@ -127,5 +150,9 @@ document.getElementById('getWeatherButton').addEventListener('click', function()
                 
                 document.getElementById('eightDayForecastList').innerHTML = forecastResults;
             });
+<<<<<<< HEAD
         })
 >>>>>>> e413bfc490e85e95caea74200e167dc1f7014d49
+=======
+        })
+>>>>>>> ab4e306b708f222243130463e3be3211da759347
