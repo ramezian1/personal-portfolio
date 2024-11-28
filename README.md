@@ -1,6 +1,6 @@
 # Robert Mezian's Developer Portfolio
 
-Welcome to my developer portfolio! This website showcases 8 projects I've built using **JavaScript**, **HTML**, and **CSS**. You can browse through my work, explore the source code, and get in touch if you'd like to collaborate.
+Welcome to my developer portfolio! This website showcases 8 projects I've built using **JavaScript**, **HTML**, and **CSS**. You can browse through my work, explore the source code, and get in touch if you'd like to collaborate. You can also view my full portfolio on my github website [HERE:](https://ramezian1.github.io/)
 
 **NOTE:** This portfolio is currently in** beta and still a work in progress**. Any updates or improvements will be posted shortly.
 
@@ -119,3 +119,5 @@ personal-portfolio/
 ├── index.html
 ├── projects.html
 └── styles.css
+
+Copyright 2024 by Robert Mezian
