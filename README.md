@@ -1,6 +1,6 @@
-# Robert Mezian's Developer Portfolio
+# Robert Mezian's Javascript Page
 
-Welcome to my developer portfolio! This website showcases 8 projects I've built using **JavaScript**, **HTML**, and **CSS**. You can browse through my work, explore the source code, and get in touch if you'd like to collaborate.
+This project showcases 8 projects I've built using **JavaScript**, **HTML**, and **CSS**. You can browse through my work, explore the source code, and get in touch if you'd like to collaborate.
 
 **NOTE:** This portfolio is currently in** beta and still a work in progress**. Any updates or improvements will be posted shortly.
 
